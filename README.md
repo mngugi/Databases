@@ -9,7 +9,8 @@ Welcome to the Databases wiki!
 To install MySQL 8.0 on Fedora, you need to add MySQL 8.0 community repository.
 `sudo dnf -y install https://dev.mysql.com/get/mysql80-community-release-fc38-1.noarch.rpm`
 This will write a repository file to `/etc/yum.repos.d/mysql-community.repo`
-` cat /etc/yum.repos.d/mysql-community.repo`
+` cat /etc/yum.repos.d/mysql-community.repo` to avoid Error: GPG check FAILED.
+
 
 
 ---
@@ -19,6 +20,8 @@ Once you have added the repository and confirm to be enabled, proceed to install
 `sudo dnf install mysql-community-server`
 After installation, the package info can be seen from:
 `rpm -qi mysql-community-server`
+
+`sudo yum update --nogpgcheck` to avoid 
 
 ---
 
